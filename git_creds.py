@@ -15,6 +15,7 @@ result in you committing changes with the wrong user.
 #     Ver    Author          Date       Comments
 #     ===    =============== ========== =======================================
 ver = 0.1  # ajpowell        2022-12-27 Initial code
+ver = 0.2  # ajpowell        2023-01-03 Minor output changes
 
 # Initialise logging module
 logging.root.handlers = []
@@ -105,8 +106,12 @@ def main():
         logging.info('Settings look good!')
     else:
         logging.info('You will not be commiting as the same user in github!')
-        logging.info('Run git config user.name <username>')
-        logging.info('And git config user.email <email>')
+        logging.info('')
+        logging.info('Change the github details by checking the ssh keys.')
+        logging.info('')
+        logging.info('Change the local details with:')
+        logging.info('   git config user.name <username>')
+        logging.info('   git config user.email <email>')
 
 
 if __name__ == '__main__':
